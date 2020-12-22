@@ -4,6 +4,9 @@ import styles from "./Cards.module.css";
 
 const Cards = ({confirmed,recovered,deaths,lastUpdate}) => {
   
+    if(!confirmed){
+        return 'Loading....'
+    }
   return (
     <div className={styles.container}>
       <Grid container spacing={3} justify="center">
@@ -12,7 +15,7 @@ const Cards = ({confirmed,recovered,deaths,lastUpdate}) => {
             <Typography color="textSecondary" gutterBottom>
               Infected People
             </Typography>
-            <Typography variant="h5">Real Data</Typography>
+            <Typography variant="h5">{confirmed.value}</Typography>
             <Typography color="textSecondary">Real Date</Typography>
             <Typography variant="body2">Active Case of Covid-19</Typography>
           </CardContent>
