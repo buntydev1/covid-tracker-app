@@ -6,7 +6,7 @@ const Cards = (props) => {
   console.log(props);
   return (
     <div className={styles.container}>
-      <Grid spacing={3} justify="center">
+      <Grid container spacing={3} justify="center">
         <Grid item component={Card}>
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
@@ -24,7 +24,9 @@ const Cards = (props) => {
             </Typography>
             <Typography variant="h5">Real Data</Typography>
             <Typography color="textSecondary">Real Date</Typography>
-            <Typography variant="body2">Recoveriescards from Covid-19</Typography>
+            <Typography variant="body2">
+              Recoveriescards from Covid-19
+            </Typography>
           </CardContent>
         </Grid>
         <Grid item component={Card}>
