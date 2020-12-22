@@ -6,7 +6,11 @@ const Cards = (props)=>{
     console.log(props);
     return(
         <div className={styles.container}>
-            hello
+            <Grid spacing={3} justify="center">
+                <Grid item component={Card}>
+                    
+                </Grid>
+            </Grid>
         </div>
     )
 }
