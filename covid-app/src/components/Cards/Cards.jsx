@@ -12,6 +12,9 @@ const Cards = (props)=>{
                         <Typograpy color="textSecondary" gutterBottom>
                             Infected People
                         </Typograpy>
+                        <Typograpy variant="h5">
+                            Real Data
+                        </Typograpy>
                     </CardContent>
                 </Grid>
             </Grid>
