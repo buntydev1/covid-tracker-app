@@ -14,6 +14,7 @@ const Cards = (props) => {
             </Typography>
             <Typography variant="h5">Real Data</Typography>
             <Typography color="textSecondary">Real Date</Typography>
+            <Typography variant="body2">Active Case of Covid-19</Typography>
           </CardContent>
         </Grid>
       </Grid>
