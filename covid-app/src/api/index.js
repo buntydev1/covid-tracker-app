@@ -6,10 +6,13 @@ export const fetchData = async () =>{
         const {data} = await axios.get(url);
 
         const modifiedData = {
-
+            confirmed: data.confirmed,
+            recovered:data.recovered,
+            deaths:data.deaths,
+            lastUpdate:data.lastUpdate
         }
 
-        return data;
+        return modifiedData;
         
     } catch (error) {
         
