@@ -8,7 +8,11 @@ const Cards = (props)=>{
         <div className={styles.container}>
             <Grid spacing={3} justify="center">
                 <Grid item component={Card}>
-                    
+                    <CardContent>
+                        <Typograpy color="textSecondary" gutterBottom>
+                            Infected People
+                        </Typograpy>
+                    </CardContent>
                 </Grid>
             </Grid>
         </div>
