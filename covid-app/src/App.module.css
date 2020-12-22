@@ -1,1 +1,9 @@
+body{
+    background-color: rgb(250,250,250);
+}
 
+.container{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+}
