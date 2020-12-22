@@ -21,8 +21,8 @@ const Chart = ()=>{
         data={{
             labels:'',
             datasets:[{},{}],
-        }} : null
-        />
+        }} 
+        />: null
     )
        
     
