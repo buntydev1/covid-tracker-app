@@ -17,23 +17,32 @@ const Chart = ({data:{confirmed,recovered,deaths},country})=>{
 
     const lineChart = (
         dailyData.length 
-        ? <Line
+        ? ( 
+        <Line
         data={{
-            labels:dailyData.map(({date}) => date),
+            labels:dailyData.map(({date}) => new Date(date).toLocaleDateString()),
             datasets:[{
-                data:dailyData.map(({confirmed}) => confirmed),
+                data:dailyData.map((data) => data.confirmed),
                 label: 'Infected',
                 borderColor:'rgb(0, 217, 255)',
                 fill:true
             },{
-                data:dailyData.map(({deaths}) => deaths),
+                data:dailyData.map((data) => data.deaths),
                 label: 'deaths',
                 borderColor:'red',
                 backgroundColor: 'rgba(255,0,0,0.5)',
                 fill:true
-            }],
+            },{
+                data: dailyData.map((data) => data.recovered),
+                label: 'Recovered',
+                borderColor: 'green',
+                backgroundColor: 'rgba(0, 255, 0, 0.5)',
+                fill: true,
+              },
+        ],
         }} 
-        />: null
+        />
+    ) : null
     );
 
     const barChart = (
@@ -54,7 +63,7 @@ const Chart = ({data:{confirmed,recovered,deaths},country})=>{
                 }}
             />
         ) : null
-    )
+    );
        
     
     return(
