@@ -13,7 +13,7 @@ const Chart = ({data:{confirmed,recovered,deaths},country})=>{
         } 
         console.log(dailyData);
         fetchAPI();
-    }, []);
+    }, [dailyData]);
 
     const lineChart = (
         dailyData.length 
