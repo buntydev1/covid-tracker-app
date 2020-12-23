@@ -1,9 +1,9 @@
 import React,{useState,useEffect} from 'react';
 import fetchDailyData from '../../api';
-import {Line} from 'react-chartjs-2';
+import {Line,Bar} from 'react-chartjs-2';
 import styles from './Chart.module.css';
 
-const Chart = ()=>{
+const Chart = ({data,country})=>{
 
     const [dailyData,setDailyData] = useState([]);
 
@@ -34,6 +34,15 @@ const Chart = ()=>{
             }],
         }} 
         />: null
+    );
+
+    const barChart = (
+        data.confirmed
+        ?(
+            <Bar 
+
+            />
+        ) : null
     )
        
     
