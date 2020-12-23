@@ -13,7 +13,7 @@ const Chart = ({data:{confirmed,recovered,deaths},country})=>{
         } 
         console.log(dailyData);
         fetchAPI();
-    });
+    },[]);
 
     const lineChart = (
         dailyData.length 
@@ -45,7 +45,7 @@ const Chart = ({data:{confirmed,recovered,deaths},country})=>{
                     datasets:[{
                         labels:'People',
                         backgroundColor:['rgb(0, 217, 255)','rgb(0, 255, 0)','rgb(255, 0, 0)'],
-                        data:[confirmed,recovered,deaths]
+                        data:[confirmed.value,recovered.value,deaths.value]
                     }]
                 }}
                 options={{
