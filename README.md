@@ -1,3 +1,5 @@
+## how to run
+
 clone the repo
 
 install dependencies using yarn install
